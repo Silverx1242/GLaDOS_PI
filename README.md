@@ -19,6 +19,7 @@ For the PC used as Server
 - **RAM**: Minimum 8GB recommended
 - **VRAM**: Minimum 4GB recommended 
 - **Internet**: Required for ElevenLabs API and LM Studio
+- 
 For Running the code
 -**Raspberry Pi 4 or Higher**
 -**OS**: Rasberry OS
