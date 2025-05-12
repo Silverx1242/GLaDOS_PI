@@ -1,6 +1,6 @@
-# GlaDOS/TARS_Pi - Advanced Conversational AI Assistant
+# GLaDOS/TARS_Pi - Advanced Conversational AI Assistant
 
-GlaDOS/TARS_Pi is an advanced conversational AI assistant that combines speech recognition, natural language processing, and text-to-speech capabilities to create an interactive and engaging experience. It features multiple character personalities and can maintain context-aware conversations.
+GLaDOS/TARS_Pi is an advanced conversational AI assistant that combines speech recognition, natural language processing, and text-to-speech capabilities to create an interactive and engaging experience. It features multiple character personalities and can maintain context-aware conversations.
 
 ## Features
 
