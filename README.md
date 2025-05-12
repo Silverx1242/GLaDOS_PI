@@ -21,10 +21,15 @@ For the PC used as Server
 - **Internet**: Required for ElevenLabs API and LM Studio
 - 
 For Running the code
+
 -**Raspberry Pi 4 or Higher**
+  
 -**OS**: Rasberry OS
+
 -**RAM**: 4GB recommended
+
 -**Storage**: at least 3GB
+
 ## Software Requirements
 
 - Python 3.8 or higher
