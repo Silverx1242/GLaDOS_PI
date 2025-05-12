@@ -13,13 +13,17 @@ TARS is an advanced conversational AI assistant that combines speech recognition
 - **Bilingual Support**: Works with both English and Spanish
 
 ## Hardware Requirements
-
+For the PC used as Server
 - **CPU**: Any modern processor (Intel/AMD)
+- **GPU**: Any Nvidia Graphic Card with with CUDA support 
 - **RAM**: Minimum 8GB recommended
-- **Storage**: At least 2GB free space
-- **Audio**: Microphone and speakers
-- **Internet**: Required for ElevenLabs API
-
+- **VRAM**: Minimum 4GB recommended 
+- **Internet**: Required for ElevenLabs API and LM Studio
+For Running the code
+-**Raspberry Pi 4 or Higher**
+-**OS**: Rasberry OS
+-**RAM**: 4GB recommended
+-**Storage**: at least 3GB
 ## Software Requirements
 
 - Python 3.8 or higher
@@ -31,8 +35,8 @@ TARS is an advanced conversational AI assistant that combines speech recognition
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/TARS.git
-cd TARS
+git clone https://github.com/Silverx1242/GLaDOS_PI.git
+cd GLaDOS_PI
 ```
 
 2. Run the installation script:
