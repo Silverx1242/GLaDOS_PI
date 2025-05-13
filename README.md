@@ -64,7 +64,7 @@ RETRY_DELAY=3
 ## Project Structure
 
 ```
-TARS/
+GLaDOS_PI/
 ├── src/
 │   ├── main.py          # Main application entry point
 │   ├── stt.py           # Speech-to-text functionality
