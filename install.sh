@@ -14,8 +14,8 @@ sudo apt install -y cmake libsndfile-dev
 
 # Instalar dependencias de Python
 echo "Instalando dependencias de Python..."
-python3 -m venv tars_env
-source tars_env/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 pip install --upgrade pip
 
 # Instalar las dependencias del proyecto
