@@ -7,9 +7,15 @@ import traceback
 import time
 import requests
 from requests.exceptions import RequestException
+from dotenv import load_dotenv
+import os
 
-MAX_RETRIES = 3
-RETRY_DELAY = 2
+# Cargar variables de entorno
+load_dotenv()
+
+# Obtener valores desde .env, usar 3 como valor por defecto si no están definidos
+MAX_RETRIES = int(os.getenv('MAX_RETRIES', 3))
+RETRY_DELAY = int(os.getenv('RETRY_DELAY', 3))
 
 def check_llm_server():
     """Verificar si el servidor LLM está disponible"""
@@ -38,7 +44,7 @@ def select_character():
         show_message("INFO", f"{idx}. {name}: {desc}")
     
     while True:
-        show_status("Ingresa el número del personaje (o 'default' para TARS):", "info")
+        show_status("Ingresa el número del personaje que deseas usar:", "info")
         choice = input().strip().lower()
         
         # Verificar si es un número
@@ -50,13 +56,8 @@ def select_character():
                 return character_names[idx]
             else:
                 show_status("Número de personaje no válido. Intenta de nuevo.", "error")
-        # Verificar si es el nombre por defecto
-        elif choice == "default":
-            character = get_character("default")
-            show_status(f"Personaje seleccionado: {character.name}", "success")
-            return "default"
         else:
-            show_status("Entrada no válida. Ingresa un número o 'default'.", "error")
+            show_status("Entrada no válida. Ingresa un número.", "error")
 
 def get_user_input():
     """Obtener entrada del usuario por voz o texto, con voz como predeterminado"""
@@ -182,8 +183,8 @@ def main():
                     show_message_with_tts(character.name, response, character)
                     
                     # Esperar más tiempo después de la respuesta antes de volver a escuchar
-                    show_status("Esperando 3 segundos antes de escuchar...", "info")
-                    time.sleep(3)
+                    show_status("Esperando 1 segundo antes de escuchar...", "info")
+                    time.sleep(1)
 
             except Exception as e:
                 show_status(f"Fallo en loop principal: {str(e)}", "error")

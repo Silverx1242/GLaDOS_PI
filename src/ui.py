@@ -2,8 +2,6 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 import time
-from tts import speak
-from utils import show_message, show_status, show_loading
 
 # Cargar variables de entorno
 load_dotenv()
@@ -61,12 +59,14 @@ def show_message(role, text, tts_callback=None):
     
     # Activar TTS solo para mensajes de TARS o GLaDOS si hay callback
     if role.upper() in ["TARS", "GLADOS"] and tts_callback:
+        from tts import speak  # Importación local para evitar ciclo
         tts_callback(text)
 
 def show_message_with_tts(role, text, character=None):
     """Mostrar mensaje y activar TTS si es necesario"""
     if character and character.voice_id:
         print(f"[DEBUG] TTS configurado para {character.name} con voice_id: {character.voice_id}")
+        from tts import speak  # Importación local para evitar ciclo
         show_message(character.name, text, tts_callback=lambda t: speak(t, character.voice_id))
     else:
         print(f"[DEBUG] TTS no configurado para {character.name if character else 'None'}")

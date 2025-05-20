@@ -5,7 +5,7 @@ import tempfile
 import wave
 import os
 from dotenv import load_dotenv
-from utils import show_status, show_loading
+from ui import show_status, show_loading
 
 # Cargar variables de entorno
 load_dotenv()

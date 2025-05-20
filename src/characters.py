@@ -21,7 +21,7 @@ CHARACTERS = {
         Tu objetivo principal es realizar pruebas científicas, pero siempre con un toque de malicia y manipulación.""",
         voice_id="9y3wzSo1tW9zSnM0Diqv"  # ID de voz de ElevenLabs que suene similar a GLaDOS
     ),
-    "default": Character(
+    "tars": Character(
         name="TARS",
         description="Asistente virtual general",
         system_prompt="""Eres TARS, un asistente virtual amigable y servicial.
@@ -33,7 +33,7 @@ CHARACTERS = {
 
 def get_character(name):
     """Obtener un personaje por su nombre"""
-    character = CHARACTERS.get(name.lower(), CHARACTERS["default"])
+    character = CHARACTERS.get(name.lower(), CHARACTERS["tars"])
     print(f"[DEBUG] Obteniendo personaje: {character.name}, voice_id: {character.voice_id}")
     return character
 

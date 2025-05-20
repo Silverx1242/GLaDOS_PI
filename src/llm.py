@@ -3,7 +3,7 @@ import requests
 import json
 from dotenv import load_dotenv
 from characters import get_character
-from utils import show_status
+from ui import show_status
 from collections import deque
 
 # Cargar variables de entorno
@@ -32,7 +32,8 @@ def get_llm_response(prompt, character=None, context=None):
 4. Mantén un tono conversacional y amigable
 5. No uses formato markdown ni listas numeradas
 6. Responde como si estuvieras en una conversación real
-7. Mantén coherencia con las respuestas anteriores"""
+7. Mantén coherencia con las respuestas anteriores
+8. al final de cada respuesta agrega un punto final"""
 
         full_prompt = system_prompt + "\n\n"
         
@@ -58,7 +59,7 @@ def get_llm_response(prompt, character=None, context=None):
         data = {
             "model": LM_STUDIO_MODEL,
             "prompt": full_prompt,
-            "max_tokens": 200,  # Reducido para respuestas más concisas
+            "max_tokens": 400,  # Reducido para respuestas más concisas
             "temperature": 0.7,
             "stop": ["Usuario:", "Contexto:", "\n\n"]
         }

@@ -16,8 +16,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuración de directorios
-DB_DIR = os.environ['DB_DIR']
-DATA_DIR = "data"
+DB_DIR = os.environ['DB_DIR', 'db']
+DATA_DIR = os.environ['DATA_DIR', 'data']
 INDEX_PATH = os.path.join(DB_DIR, "processed_files.json")
 CACHE_SIZE = 1000  # Número de embeddings a cachear
 

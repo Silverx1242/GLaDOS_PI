@@ -2,7 +2,7 @@ import os
 import requests
 import tempfile
 from dotenv import load_dotenv
-from utils import show_status
+from ui import show_status
 import pygame
 import time
 
